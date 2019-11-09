@@ -27,11 +27,12 @@ passport.use(localStrategy);
 app.use(passport.initialize());
 app.use(passport.session());
 
-// app.use((req, res, next) => {
-//   console.log(req.session);
-//   next();
-// });
+app.use((req, res, next) => {
+  app.locals.user = req.user;
+  next();
+});
 
+hbs.localsAsTemplateData(app);
 hbs.registerPartials(`${__dirname}/views/partials`);
 app.set("view engine", "hbs");
 app.set("views", `${__dirname}/views`);

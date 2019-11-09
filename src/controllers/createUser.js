@@ -1,5 +1,6 @@
 const { User } = require('../models')
 const bcrypt = require('bcrypt');
+const passport = require('passport');
 
 const createUser = (request, response, next) => {
   const newUser = request.body;
@@ -27,8 +28,12 @@ const createUser = (request, response, next) => {
         description : newUser.description,
        })
       .then(user => {
-        console.log(user);
-        response.redirect("/")
+        request.login(user, (err) => {
+          if (err) {
+            console.log(err);
+          };
+        });
+        response.redirect('/profile');
       })
       .catch(err => {
         console.log(err);

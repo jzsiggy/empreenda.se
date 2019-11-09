@@ -1,5 +1,9 @@
 const renderSignupForm = (request, response, next) => {
-  response.render("auth/signup");
+  if (request.user) {
+    response.redirect("/profile");
+  } else {
+    response.render("auth/signup");
+  }
 };
 
 module.exports = renderSignupForm;

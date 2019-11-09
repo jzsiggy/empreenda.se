@@ -7,13 +7,19 @@
   <title>Document</title>
 </head>
 <body>
-  {{!-- <div id="nav">
+  <div id="nav">
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
+      <a href="/"><li>home</li></a>
+      {{#if @user}}
+      <a href="/profile"><li>Profile</li></a>
+      <a href="/logout"><li>logout</li></a>
+      {{else}}
+      <a href="/login"><li>login in</li></a>
+      <a href="/signup"><li>sign up</li></a>
+      {{/if}}
     </ul>
-  </div> --}}
+  </div>
+  
   {{{ body }}}
 </body>
 </html>
