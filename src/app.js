@@ -36,7 +36,7 @@ hbs.localsAsTemplateData(app);
 hbs.registerPartials(`${__dirname}/views/partials`);
 app.set("view engine", "hbs");
 app.set("views", `${__dirname}/views`);
-app.set(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/public`));
 app.use(bodyParser.urlencoded( { extended : true } ));
 app.use("/", router);
 
