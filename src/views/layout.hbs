@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="/stylesheets/navbar.css">
   <link rel="stylesheet" href="/stylesheets/styles.css">
   
+  {{#ifequals @path "/signup"}}
+    <link rel="stylesheet" href="/stylesheets/signup-form.css">
+    <script src="/javascript/signupAnim.js"></script>
+  {{/ifequals}}
+  
   <title>Document</title>
 </head>
 <body>
@@ -14,6 +19,7 @@
     <ul>
       <a href="/"><li>home</li></a>
       {{#if @user}}
+      <a href="/board"><li>Board</li></a>
       <a href="/profile"><li>Profile</li></a>
       <a href="/logout"><li>logout</li></a>
       {{else}}

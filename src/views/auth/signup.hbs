@@ -1,6 +1,11 @@
 <form action="/signup" method="POST" id="form">
   <h2>Sign Up</h2>
 
+  <select name="status" class="studentStartupRadio">
+    <option value="student">Student</option>
+    <option value="startup">Startup</option>
+  </select>
+
   <label for="username">Username</label>
   <input type="text" name="username">
 
@@ -12,6 +17,21 @@
 
   <label for="description">Description</label>
   <input type="text" name="description">
+
+  <div class="startup-signup hide">
+    
+    <h2>Startup Information</h2>
+
+    <label for="startup-name">Name</label>
+    <input type="text" name="startup-name">
+
+    <label for="startup-description">Description</label>
+    <input type="text" name="startup-description">
+
+    <label for="startup-area">Category</label>
+    <input type="text" name="startup-category">
+
+  </div>
 
   {{#if errorMessage }}
     <div class="error-message">{{ errorMessage }}</div>
