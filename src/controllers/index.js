@@ -1,10 +1,11 @@
 const home = require('./home');
-const createUser = require('./createUser');
 const loginUser = require('./loginUser');
 const renderLoginForm = require('./renderLoginForm')
 const renderSignupForm = require('./renderSignupForm')
 const renderProfile = require('./renderProfile');
 const logoutUser = require('./logoutUser');
+const createUser = require('./createuser');
+const renderBoard = require('./renderBoard');
 
 module.exports = {
   home,
@@ -14,4 +15,5 @@ module.exports = {
   renderLoginForm,
   renderSignupForm,
   renderProfile,
+  renderBoard,
 };
