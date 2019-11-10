@@ -17,7 +17,11 @@ const userSchema = new Schema(
   },
   description : {
     type : String,
-  }, 
+  },
+  startup : {
+    type : mongoose.Schema.Types.ObjectId,
+    ref : "Startup",
+  },
 }, 
 {
   timestamps : true,

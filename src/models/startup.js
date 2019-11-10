@@ -10,7 +10,7 @@ const startupSchema = new Schema({
     type : Number,
     required : false,
   },
-  area : {
+  category : {
     type : String,
     required : true,
   },
@@ -18,6 +18,10 @@ const startupSchema = new Schema({
     type : String,
     required : true,
   },
+  // admin : {
+  //   type : mongoose.Schema.Types.ObjectId,
+  //   ref : 'User', 
+  // },
 });
 
 const Startup = mongoose.model("Startup", startupSchema);
