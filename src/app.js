@@ -32,6 +32,18 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use((req, res, next) => {
+  app.locals.path = req.path;
+  next();
+});
+
+hbs.registerHelper('ifequals', (a, b, options) => {
+  if (a == b) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
+
 hbs.localsAsTemplateData(app);
 hbs.registerPartials(`${__dirname}/views/partials`);
 app.set("view engine", "hbs");
