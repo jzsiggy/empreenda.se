@@ -5,7 +5,8 @@ const {
   logoutUser,
   renderLoginForm,
   renderSignupForm,
-  renderProfile
+  renderProfile,
+  renderBoard,
 } = require('../controllers')
 
 const ensureLogin = require('connect-ensure-login');
@@ -19,5 +20,6 @@ router.get("/signup", renderSignupForm);
 router.post("/signup", createUser);
 router.get("/profile", ensureLogin.ensureLoggedIn(), renderProfile);
 router.get("/logout", logoutUser);
+router.get("/board", ensureLogin.ensureLoggedIn(), renderBoard);
 
 module.exports = router;
