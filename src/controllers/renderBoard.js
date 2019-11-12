@@ -6,6 +6,7 @@ const renderBoard = (request, response, next) => {
     Startup.find({ })
     .then(startups => {
       response.render("board", {
+        currentUser : "Student",
         users : startups,
       });
     });
@@ -13,6 +14,7 @@ const renderBoard = (request, response, next) => {
     User.find({ startup : { $exists : false } })
     .then(users => {
       response.render("board", {
+        currentUser : "Startup",
         users
       });
     });
