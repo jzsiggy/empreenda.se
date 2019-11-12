@@ -7,6 +7,7 @@ const {
   renderSignupForm,
   renderProfile,
   renderBoard,
+  parseLike,
 } = require('../controllers')
 
 const ensureLogin = require('connect-ensure-login');
@@ -21,5 +22,6 @@ router.post("/signup", createUser);
 router.get("/profile", ensureLogin.ensureLoggedIn(), renderProfile);
 router.get("/logout", logoutUser);
 router.get("/board", ensureLogin.ensureLoggedIn(), renderBoard);
+router.post("/like", ensureLogin.ensureLoggedIn(), parseLike);
 
 module.exports = router;

@@ -50,6 +50,7 @@ app.set("view engine", "hbs");
 app.set("views", `${__dirname}/views`);
 app.use(express.static(`${__dirname}/public`));
 app.use(bodyParser.urlencoded( { extended : true } ));
+app.use(bodyParser.json());
 app.use("/", router);
 
 app.listen(3000, () => {
