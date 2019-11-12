@@ -6,6 +6,7 @@ const renderProfile = require('./renderProfile');
 const logoutUser = require('./logoutUser');
 const createUser = require('./createuser');
 const renderBoard = require('./renderBoard');
+const parseLike = require('./parseLike');
 
 module.exports = {
   home,
@@ -16,4 +17,5 @@ module.exports = {
   renderSignupForm,
   renderProfile,
   renderBoard,
+  parseLike,
 };
