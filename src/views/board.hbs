@@ -1,18 +1,20 @@
 <h1>board</h1>
-<div class="container">
 
 {{#ifequals currentUser "Startup"}}
   <h1>Devs in your Area</h1>
-  {{#each ../users}}
-    {{>userCard user=this}}
-  {{/each}}
+  <div class="container">
+    {{#each ../users}}
+      {{>userCard user=this}}
+    {{/each}}
+  </div>
 {{/ifequals}}
 
 {{#ifequals currentUser "Student"}}
   <h1>Startups in your Area</h1>
-  {{#each ../users}}
-    {{>startupCard startup=this}}
-  {{/each}}
+  <div class="container">
+    {{#each ../users}}
+      {{>startupCard startup=this}}
+    {{/each}}
+  </div>
 {{/ifequals}}
 
-</div>
