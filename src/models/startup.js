@@ -22,6 +22,9 @@ const startupSchema = new Schema({
   //   type : mongoose.Schema.Types.ObjectId,
   //   ref : 'User', 
   // },
+  likers : {
+    type : Array,
+  },
 });
 
 const Startup = mongoose.model("Startup", startupSchema);

@@ -22,6 +22,9 @@ const userSchema = new Schema(
     type : mongoose.Schema.Types.ObjectId,
     ref : "Startup",
   },
+  likers : {
+    type : Array,
+  },
 }, 
 {
   timestamps : true,
