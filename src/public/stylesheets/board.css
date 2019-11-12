@@ -19,3 +19,18 @@
 .card:hover {
   transform: scale(1.02);
 }
+
+.like-btn {
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.like-btn-bw {
+  background-image: url("../images/likes/bw.png");
+}
+
+.like-btn-red {
+  background-image: url("../images/likes/red.png");
+}

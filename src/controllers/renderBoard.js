@@ -8,6 +8,7 @@ const renderBoard = (request, response, next) => {
       response.render("board", {
         currentUser : "Student",
         users : startups,
+        currentUserId : request.user._id,
       });
     });
   } else {
@@ -15,7 +16,8 @@ const renderBoard = (request, response, next) => {
     .then(users => {
       response.render("board", {
         currentUser : "Startup",
-        users
+        users,
+        currentUserId : request.user._id,
       });
     });
   };
