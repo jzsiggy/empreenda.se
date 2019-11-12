@@ -3,9 +3,11 @@ window.addEventListener('load', () => {
 
   for (const btn of likeButtons) {
     btn.addEventListener("click", () => {
-      console.log(btn.getAttribute("user-id"));
+      btn.classList.toggle("like-btn-bw")
+      btn.classList.toggle("like-btn-red")
       axios.post("/like", {
         "likedUser" : btn.getAttribute("user-id"),
+        "likedUserStatus": btn.getAttribute("user-status")
       });
     });
   };
