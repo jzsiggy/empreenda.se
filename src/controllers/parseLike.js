@@ -3,7 +3,7 @@ const { User , Startup } = require('../models');
 const parseLike = (request, response, next) => {
   const likedUserId = request.body.likedUser;
   const likedUserStatus = request.body.likedUserStatus;
-  const likerId = response.req.user._id;
+  const likerId = request.session.passport.user._id;
 
   if (likedUserStatus == "user") {
     User.findById(likedUserId)

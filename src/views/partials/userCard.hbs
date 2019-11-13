@@ -14,7 +14,11 @@
     <p>{{user.description}}</p>
   </div>
 
-  <div class="like-btn like-btn-bw" user-id="{{user._id}}" user-status="user"></div>
+  {{#if user.userHasLiked}}
+    <div class="like-btn like-btn-red" user-id="{{user._id}}" user-status="user"></div>
+  {{else}}
+    <div class="like-btn like-btn-bw" user-id="{{user._id}}" user-status="user"></div>
+  {{/if}}
 
 </div>
 
