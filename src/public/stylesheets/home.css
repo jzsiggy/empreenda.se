@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+body {
+  font-family: 'raleway', sans-serif;
+  margin: 0;
+}
+
+.hero {
+  transition: ease 0.3s all;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  height : 40vh;
+  width: 100%;
+  border-radius: 20px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero:hover {
+  transform: scale(1.02);
+}
+
+.hero > h1 {
+  font-weight: bold;
+  color: white;
+}
+
+.hero > h3 {
+  color: white;
+}
+
+hr {
+  margin: 100px;
+  opacity: 0.2;
+}
+
+.feats {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.feats > .feature {
+  width: 30%;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
