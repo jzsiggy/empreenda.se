@@ -15,3 +15,7 @@
 <h3>{{user.description}}</h3>
 <br>
 
+<h2>People Interested in You</h2>
+{{#each user.likers}}
+  <p>{{this}}</p>
+{{/each}}
