@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+body {
+  font-family: 'raleway', sans-serif;
+  margin: 0;
+}
+
 .main {
   margin: 40px;
 }

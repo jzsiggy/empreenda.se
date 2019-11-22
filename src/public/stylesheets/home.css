@@ -1,11 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
-body {
-  font-family: 'raleway', sans-serif;
-  margin: 0;
-}
-
 .hero {
+  margin-top: 100px;
   transition: ease 0.3s all;
   box-shadow: 0 0 3px rgba(0,0,0,0.2);
   height : 40vh;
@@ -46,5 +40,40 @@ hr {
   box-shadow: 0 0 3px rgba(0,0,0,0.2);
   border-radius: 10px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 20px 0;
+  text-align: center;
+}
+
+.feature > h2 {
+  margin: 20px 0 20px 0;
+}
+
+.feat-img {
+  transition: ease 0.3s all;
+  height: 75px;
+  width: 75px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.feat-img:hover {
+  transform: scale(1.1);
+}
+
+.feature > p {
+  margin: 20px;
+}
+
+.feat-img-1 {
+  background-image: url('../images/Icons/png/016-observatory.png');
+}
+
+.feat-img-2 {
+  background-image: url('../images/Icons/png/030-world.png');
+}
+
+.feat-img-3 {
+  background-image: url('../images/Icons/png/026-stars.png');
 }
