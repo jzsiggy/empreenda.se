@@ -12,6 +12,10 @@
     <script src="/javascript/signupAnim.js"></script>
   {{/ifequals}}
 
+  {{#ifequals @path "/login"}}
+    <link rel="stylesheet" href="/stylesheets/login-form.css">
+  {{/ifequals}}
+
   {{#ifequals @path "/board"}}
     <link rel="stylesheet" href="/stylesheets/board.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>

@@ -1,41 +1,43 @@
-<form action="/signup" method="POST" id="form">
-  <h2>Sign Up</h2>
+<div class="container">
+  <form action="/signup" method="POST" id="form">
+    <h2>Sign Up</h2>
 
-  <select name="status" class="studentStartupRadio">
-    <option value="student">Student</option>
-    <option value="startup">Startup</option>
-  </select>
+    <select name="status" class="studentStartupRadio">
+      <option value="student">Student</option>
+      <option value="startup">Startup</option>
+    </select>
 
-  <label for="username">Username</label>
-  <input type="text" name="username">
+    <label for="username">Username</label>
+    <input type="text" name="username">
 
-  <label for="password">Password</label>
-  <input type="password" name="password">
+    <label for="password">Password</label>
+    <input type="password" name="password">
 
-  <label for="email">Email</label>
-  <input type="email" name="email">
+    <label for="email">Email</label>
+    <input type="email" name="email">
 
-  <label for="description">Description</label>
-  <input type="text" name="description">
+    <label for="description">Description</label>
+    <input type="text" name="description">
 
-  <div class="startup-signup hide">
-    
-    <h2>Startup Information</h2>
+    <div class="startup-signup hide">
+      
+      <h2>Startup Information</h2>
 
-    <label for="startup-name">Name</label>
-    <input type="text" name="startup-name">
+      <label for="startup-name">Name</label>
+      <input type="text" name="startup-name">
 
-    <label for="startup-description">Description</label>
-    <input type="text" name="startup-description">
+      <label for="startup-description">Description</label>
+      <input type="text" name="startup-description">
 
-    <label for="startup-area">Category</label>
-    <input type="text" name="startup-category">
+      <label for="startup-area">Category</label>
+      <input type="text" name="startup-category">
 
-  </div>
+    </div>
 
-  {{#if errorMessage }}
-    <div class="error-message">{{ errorMessage }}</div>
-  {{/if}}
+    {{#if errorMessage }}
+      <div class="error-message">{{ errorMessage }}</div>
+    {{/if}}
 
-  <button type="submit">Sign Up</button>
-</form>
+    <button type="submit">Sign Up</button>
+  </form>
+</div>
