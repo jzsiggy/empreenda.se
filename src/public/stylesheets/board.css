@@ -4,12 +4,17 @@
   flex-wrap: wrap;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .card {
   transition: ease 0.1s all;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 30%;
 
   margin: 20px;
   border-radius: 15px;
@@ -33,4 +38,10 @@
 
 .like-btn-red {
   background-image: url("../images/likes/red.png");
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 300px;
+  }
 }

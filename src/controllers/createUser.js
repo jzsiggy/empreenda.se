@@ -26,7 +26,7 @@ const createUserWithoutStartup = (request, response, next) => {
             console.log(err);
           };
         });
-        response.redirect('/profile');
+        response.redirect('/board');
       })
       .catch(err => {
         console.log(err);
@@ -73,7 +73,7 @@ createUserLinkedToStartup = (request, response, next) => {
               console.log(err);
             };
           });
-          response.redirect('/profile');
+          response.redirect('/board');
         })
       });
     };
@@ -92,7 +92,7 @@ const createUser = (request, response, next) => {
     });
     return;
   };
-  if (request.body.status === "student") {
+  if (request.body.status === "Desenvolvedor") {
     createUserWithoutStartup(request, response, next);
   } else {
     createUserLinkedToStartup(request, response, next)

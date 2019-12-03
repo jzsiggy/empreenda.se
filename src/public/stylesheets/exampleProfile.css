@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.text {
+  width: 40%;
+}
+
+.img {
+  height: 400px;
+  width: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('/images/profile.jpg');
+}
+
+@media screen and (max-width: 600px) {
+  .text {
+    width: 80%;
+  }
+}

@@ -1,21 +1,26 @@
-<div class="card">
-  
-  <h2>Name</h2>
-  
-  <p>{{startup.name}}</p>
-  
-  <h2>Category</h2>
-  
-  <p>{{startup.category}}</p>
-  
-  <h2>Description</h2>
-  <div class="description">
-    <p>{{startup.description}}</p>
+
+<a href="/exampleProfileStartup">
+
+  <div class="card">
+    
+    <h2>Name</h2>
+    
+    <p>{{startup.name}}</p>
+    
+    <h2>Category</h2>
+    
+    <p>{{startup.category}}</p>
+    
+    <h2>Description</h2>
+    <div class="description">
+      <p>{{startup.description}}</p>
+    </div>
+
+    {{#if startup.userHasLiked}}
+      <div class="like-btn like-btn-red" user-id="{{startup._id}}" user-status="startup"></div>
+    {{else}}
+      <div class="like-btn like-btn-bw" user-id="{{startup._id}}" user-status="startup"></div>
+    {{/if}}
   </div>
 
-  {{#if startup.userHasLiked}}
-    <div class="like-btn like-btn-red" user-id="{{startup._id}}" user-status="startup"></div>
-  {{else}}
-    <div class="like-btn like-btn-bw" user-id="{{startup._id}}" user-status="startup"></div>
-  {{/if}}
-</div>
+</a>

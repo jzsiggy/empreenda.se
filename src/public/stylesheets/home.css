@@ -1,3 +1,9 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .hero {
   margin-top: 100px;
   transition: ease 0.3s all;
@@ -33,6 +39,7 @@ hr {
 .feats {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .feats > .feature {
@@ -76,4 +83,17 @@ hr {
 
 .feat-img-3 {
   background-image: url('../images/Icons/png/026-stars.png');
+}
+
+@media screen and (max-width: 1000px) {
+
+  .feature {
+    min-width: 80%;
+    margin: 10% 0 10% 0;
+  }
+
+  .main {
+    margin: 10px;
+  }
+
 }

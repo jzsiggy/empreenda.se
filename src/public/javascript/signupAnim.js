@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
   const startupSignupDiv = document.querySelector(".startup-signup");
   studentStartupRadio.addEventListener('change', () => {
     console.log(studentStartupRadio.value);
-    if (studentStartupRadio.value === "student") {
+    if (studentStartupRadio.value === "Desenvolvedor") {
       startupSignupDiv.classList = "startup-signup hide";
     } else {
       startupSignupDiv.classList = "startup-signup";
