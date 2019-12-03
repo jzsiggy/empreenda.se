@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const mongooseConnect = () => {
   mongoose
-  .connect('mongodb://localhost/empreenda', {
+  .connect('mongodb+srv://Empreenda:empreenda@empreendase-kx7zu.gcp.mongodb.net/test?retryWrites=true&w=majority', {
     useUnifiedTopology: true,
     useNewUrlParser: true
   })

@@ -64,4 +64,4 @@ mongooseConnect()
 
 setTimeout(() => {
   seedDb(users)
-}, 1000);
+}, 20000);
